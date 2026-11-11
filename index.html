@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Pratheeba S, B.Sc. Computer Science student.">
+<title>Pratheeba S | Computer Science Student</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a30;--panel2:#17213b;--text:#eef3ff;--muted:#a8b4cc;--accent:#83aaff;--accent2:#9de3d1;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1a2c50 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--accent)}
+.links{display:flex;gap:22px;align-items:center;color:var(--muted);font-size:.9rem}.links a:hover{color:var(--text)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px}
+.hero{min-height:610px;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:55px;padding:90px 0 75px}
+.eyebrow{color:var(--accent2);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+h1{font-size:clamp(3.2rem,8vw,6.5rem);line-height:.98;letter-spacing:-.065em;margin:18px 0}
+h1 span{color:var(--accent)}.role{font-size:clamp(1.15rem,2.3vw,1.6rem);font-weight:650;margin:22px 0 10px}
+.lead{color:var(--muted);max-width:620px;font-size:1.04rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:750;border:1px solid var(--line);transition:.2s}.primary{background:var(--accent);color:#091225;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(145deg,rgba(131,170,255,.17),rgba(157,227,209,.06));border:1px solid var(--line);border-radius:28px;padding:30px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 25px 80px rgba(0,0,0,.2)}
+.initials{width:112px;height:112px;border-radius:28px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#091225;font-size:2.5rem;font-weight:900;letter-spacing:-.08em}
+.profile-card small{color:var(--accent2);letter-spacing:.15em;text-transform:uppercase;font-weight:800}.profile-card h2{font-size:1.65rem;margin:10px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 80px}.stat,.card{background:rgba(18,26,48,.82);border:1px solid var(--line);border-radius:18px;padding:22px}.stat strong{display:block;font-size:1.8rem;color:var(--accent)}.stat span{font-size:.86rem;color:var(--muted)}
+section{padding:72px 0;scroll-margin-top:80px}.section-tag{color:var(--accent2);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0 28px}.muted{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.about-grid p{margin-top:0}.education{display:flex;gap:15px;align-items:flex-start}.dot{width:11px;height:11px;border-radius:50%;background:var(--accent);margin-top:9px;flex:none}.education h3{margin:0 0 4px}.education p{margin:0;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.skill b{display:block;margin-bottom:10px}.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:.82rem;color:#dce7ff;background:rgba(131,170,255,.12);border:1px solid rgba(131,170,255,.2);padding:6px 10px;border-radius:999px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{min-height:220px;display:flex;flex-direction:column}.project .number{color:var(--accent2);font-size:.8rem;font-weight:800;letter-spacing:.12em}.project h3{font-size:1.3rem;margin:12px 0 8px}.project p{color:var(--muted);margin:0 0 18px}.project .pills{margin-top:auto}
+.note{border:1px dashed rgba(157,227,209,.35);background:rgba(157,227,209,.05);padding:18px;border-radius:14px;color:var(--muted)}
+.contact{display:flex;justify-content:space-between;gap:30px;align-items:center;background:linear-gradient(120deg,rgba(131,170,255,.14),rgba(157,227,209,.07));border:1px solid var(--line);border-radius:24px;padding:32px}
+.contact h2{font-size:2rem;margin:0 0 8px}.contact p{margin:0;color:var(--muted)}
+footer{padding:28px 0;color:var(--muted);border-top:1px solid var(--line);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:28px;padding-top:65px}.profile-card{min-height:240px}.skills{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.links{display:none;position:absolute;top:72px;left:0;right:0;background:#0d1427;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1100px)}.stats{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.contact{align-items:flex-start;flex-direction:column}.hero{min-height:auto}.stat{padding:16px}}
+
+.portrait-card{padding:18px;gap:18px;overflow:hidden}
+.portrait{width:100%;height:350px;object-fit:cover;object-position:center 30%;border-radius:18px;border:1px solid var(--line)}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cert-card{padding:14px;overflow:hidden}
+.cert-card img{display:block;width:100%;height:230px;object-fit:contain;background:#fff;border-radius:12px;margin-bottom:16px}
+.cert-card h3{font-size:1.12rem;line-height:1.35;margin:10px 0 8px}
+.cert-card p{margin:0}
+@media(max-width:700px){.cert-grid{grid-template-columns:1fr}.cert-card img{height:auto;max-height:260px}.portrait{height:390px}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home">PRATHEEBA<span>.</span></a>
+<button class="menu" id="menu" aria-label="Open navigation">Menu</button>
+<div class="links" id="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<div class="wrap" id="home">
+<div class="hero">
+<div>
+<div class="eyebrow">Computer Science Student · Open to Opportunities</div>
+<h1>HELLO,<br>I’M <span>PRATHEEBA.</span></h1>
+<div class="role">B.Sc. Computer Science Student</div>
+<p class="lead">I’m a third-year Computer Science student interested in programming and building practical software solutions. I enjoy learning new technologies and applying my skills through academic projects.</p>
+<div class="actions"><a class="btn primary" href="#contact">Get in touch ↗</a><a class="btn" href="#projects">Explore projects ↓</a></div>
+</div>
+<div class="profile-card portrait-card"><img class="portrait" src="assets/pratheeba-profile.jpg" alt="Professional portrait of Pratheeba S"><div><small>Professional profile</small><h2>Curious mind.<br>Practical problem solver.</h2><p class="muted">Python · Java · Web Technologies</p></div></div>
+</div>
+<div class="stats">
+<div class="stat"><strong>71%</strong><span>Academic aggregate provided</span></div>
+<div class="stat"><strong>4</strong><span>Technical skills listed</span></div>
+<div class="stat"><strong>2</strong><span>Academic projects</span></div>
+</div>
+</div>
+<section id="about"><div class="wrap">
+<div class="section-tag">Professional profile</div><h2 class="section-title">About Me</h2>
+<div class="about-grid">
+<div class="card"><h3>Introduction</h3><p class="muted">I am Pratheeba S, a third-year B.Sc. Computer Science student. My interests include programming, web technologies, and software-based problem solving. Through my academic projects, I am developing my ability to understand problems and create useful solutions.</p><p class="muted">I am looking forward to opportunities that help me gain practical experience, strengthen my technical knowledge, and grow as a technology professional.</p></div>
+<div class="card"><h3>Academic Journey</h3><div class="education"><span class="dot"></span><div><h3>B.Sc. Computer Science</h3><p>Third Year</p><p>KPR College of Arts, Science and Research</p><p>Academic aggregate: 71%</p></div></div></div>
+</div></div></section>
+<section id="skills"><div class="wrap">
+<div class="section-tag">What I work with</div><h2 class="section-title">Technical Skills</h2>
+<div class="skills">
+<div class="skill"><b>Programming</b><div class="pills"><span class="pill">Python</span><span class="pill">Java</span></div></div>
+<div class="skill"><b>Web Development</b><div class="pills"><span class="pill">HTML</span><span class="pill">CSS</span></div></div>
+<div class="skill"><b>Core Strengths</b><div class="pills"><span class="pill">Problem solving</span><span class="pill">Learning</span></div></div>
+<div class="skill"><b>Interests</b><div class="pills"><span class="pill">Software projects</span><span class="pill">Web technologies</span></div></div>
+</div></div></section>
+<section id="projects"><div class="wrap">
+<div class="section-tag">Selected academic work</div><h2 class="section-title">Projects</h2>
+<div class="projects">
+<div class="card project"><span class="number">PROJECT 01</span><h3>Stock Level Prediction and Control Software</h3><p>An academic software project focused on predicting stock requirements and supporting inventory-level monitoring and control.</p><div class="pills"><span class="pill">Python</span><span class="pill">Prediction</span><span class="pill">Inventory</span></div></div>
+<div class="card project"><span class="number">PROJECT 02</span><h3>Student Placement Prediction</h3><p>A student-focused prediction project that explores factors which may influence placement outcomes.</p><div class="pills"><span class="pill">Prediction</span><span class="pill">Student data</span></div></div>
+
+</div></div></section>
+<section id="certifications"><div class="wrap">
+<div class="section-tag">Learning & achievements</div><h2 class="section-title">Certifications</h2>
+<div class="cert-grid">
+<div class="card cert-card"><img src="assets/oracle-certificate.jpg" alt="Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate certificate"><div><span class="number">ORACLE UNIVERSITY · FEBRUARY 19, 2026</span><h3>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3><p class="muted">Oracle Certified Foundations Associate. Valid until February 19, 2028.</p></div></div>
+<div class="card cert-card"><img src="assets/simplilearn-certificate.jpg" alt="Simplilearn Introduction to Data Analytics certificate"><div><span class="number">SIMPLILEARN SKILLUP · SEPTEMBER 5, 2026</span><h3>Introduction to Data Analytics</h3><p class="muted">Certificate of Completion.</p></div></div>
+<div class="card cert-card"><img src="assets/alert-golden-army-certificate.jpg" alt="Alert Golden Army Fest 3.0 certificate of participation"><div><span class="number">ALERT GOLDEN ARMY FEST 3.0 · SEPTEMBER 10, 2026</span><h3>First Aid &amp; Road Safety Symposium</h3><p class="muted">Certificate of Participation. Conducted by ALERT NGO and PSGR Krishnammal College for Women.</p></div></div>
+</div>
+</div></section>
+<section id="contact"><div class="wrap">
+<div class="contact"><div><div class="section-tag">Let’s connect</div><h2>Have an opportunity?</h2><p>I’m happy to connect about internships, projects, and learning opportunities.</p></div><div class="actions"><a class="btn primary" href="mailto:pratheeba723@gmail.com">Email me ↗</a><a class="btn" href="https://github.com/pratheeba28b24-hash" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Pratheeba S</span><span>Designed as a personal student portfolio</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body></html>
